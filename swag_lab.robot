@@ -18,6 +18,8 @@ Test Checkout
 
     Click Element    xpath=//*[@id="cart_contents_container"]/div/div[2]/a[2]
 
+    Your Information    John    Doe     55555
+
     Close Browser
 
 *** Keywords ***
@@ -36,3 +38,9 @@ Add item to cart
     [Arguments]     ${item}
     Click Button    xpath=//div[@class='inventory_item' and contains(.,'${item}')]//button[contains(.,'ADD')]
 
+Your Information
+    [Arguments]     ${first}    ${last}  ${zip}
+    Input Text  id=first-name   ${first}
+    Input Text  id=last-name    ${last}
+    Input Text  id=postal-code  ${zip}
+    Click Element   xpath=//*[@id="checkout_info_container"]/div/form/div[2]/input
