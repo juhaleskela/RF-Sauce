@@ -11,6 +11,9 @@ ${DELAY}            1
 Test Checkout
     Prepare Browser
     Login   standard_user   secret_sauce
+
+    Add item to cart    Jacket
+    
     Close Browser
 
 *** Keywords ***
@@ -25,5 +28,7 @@ Login
     Input Text  id=password     ${arg2}
     Click Element   login-button
 
-    
+Add item to cart
+    [Arguments]     ${item}
+    Click Button    xpath=//div[@class='inventory_item' and contains(.,'${item}')]//button[contains(.,'ADD')]
 
