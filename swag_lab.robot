@@ -20,6 +20,8 @@ Test Checkout
 
     Your Information    John    Doe     55555
 
+    Click Element   xpath=//*[@id="checkout_summary_container"]/div/div[2]/div[8]/a[2]
+
     Close Browser
 
 *** Keywords ***
