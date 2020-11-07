@@ -16,6 +16,8 @@ Test Checkout
 
     Click Element    xpath=//*[@id="shopping_cart_container"]/a
 
+    Click Element    xpath=//*[@id="cart_contents_container"]/div/div[2]/a[2]
+
     Close Browser
 
 *** Keywords ***
