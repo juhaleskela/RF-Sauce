@@ -5,7 +5,7 @@ Library           SeleniumLibrary   run_on_failure=Nothing
 ${URL}              https://www.saucedemo.com/
 ${BROWSER}          chrome
 ${DRIVER}           rf-env/WebDriverManager/chrome/86.0.4240.22/chromedriver_win32/chromedriver.exe
-${DELAY}            1
+${DELAY}            0
 
 *** Test Cases ***
 Test Checkout
@@ -13,7 +13,9 @@ Test Checkout
     Login   standard_user   secret_sauce
 
     Add item to cart    Jacket
-    
+
+    Click Element    xpath=//*[@id="shopping_cart_container"]/a
+
     Close Browser
 
 *** Keywords ***
